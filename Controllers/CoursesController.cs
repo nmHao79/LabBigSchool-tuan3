@@ -23,7 +23,8 @@ namespace LabBigSchool.Controllers
         {
             var viewModel = new CourseViewModel
             {
-                Categories = _dbContext.Categories.ToList()
+                Categories = _dbContext.Categories.ToList(),
+                Heading ="Add Course"
             };
             return View(viewModel);
         }
@@ -88,7 +89,9 @@ namespace LabBigSchool.Controllers
                 Date = course.Datatime.ToString("dd/M/yyyy"),
                 Time = course.Datatime.ToString("HH:mm"),
                 Category = course.CategoryId,
-                Place = course.Place
+                Place = course.Place,
+                Heading="Edit Course",
+                Id = course.Id
             };
 
             return View("Create", viewModel);
