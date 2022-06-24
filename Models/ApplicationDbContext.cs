@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
+﻿    using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -40,7 +40,7 @@ namespace LabBigSchool.Models
                 .HasMany(u => u.Followees)
                 .WithRequired(f => f.Follower)
                 .WillCascadeOnDelete(false);
-            base.OnModelCreating(modelBuilder);
+            
             base.OnModelCreating(modelBuilder);
         }
     }

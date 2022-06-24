@@ -22,8 +22,7 @@ namespace LabBigSchool.Controllers
             var upcommingCourses = _dbContext.Courses
                 .Include(c => c.Lecturer)
                 .Include(c => c.Category)
-                .Where(c => c.Datatime > DateTime.Now);
-            return View(upcommingCourses);
+                .Where(c => c.Datatime > DateTime.Now);           
             var viewModel = new CoursesViewModel
             {
                 UpcommingCourses = upcommingCourses,
